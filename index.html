@@ -624,9 +624,9 @@
     <div class="footer-logo">Paris Sport Week</div>
     <div class="footer-sub">Par Lisa Lys · Paris · 2026</div>
     <div class="footer-links">
-      <a href="https://www.instagram.com/kahstudioandcoffee/" target="_blank">Instagram</a>
+      <a href="https://www.instagram.com/parissportweek/" target="_blank">Instagram</a>
       <a href="https://sport-paris.beehiiv.com" target="_blank">Archives</a>
-      <a href="mailto:lisamonterdez@gmail.com">Contact</a>
+      <a href="mailto:parissportweek@protonmail.com">Contact</a>
     </div>
     <div class="footer-legal">© 2026 Paris Sport Week · Tous droits réservés</div>
   </footer>
@@ -637,7 +637,7 @@
       const emailHero = document.getElementById('email-hero');
       const emailCta = document.getElementById('email-cta');
       const email = (emailHero && emailHero.value) || (emailCta && emailCta.value) || '';
-      window.open('https://sport-paris.beehiiv.com/subscribe?utm_source=landing', '_blank');
+      window.location.href = 'https://sport-paris.beehiiv.com/subscribe?email=' + encodeURIComponent(email) + '&utm_source=parissportweek';
     }
   </script>
 
