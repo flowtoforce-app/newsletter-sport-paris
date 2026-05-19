@@ -645,7 +645,27 @@
       const emailHero = document.getElementById('email-hero');
       const emailCta = document.getElementById('email-cta');
       const email = (emailHero && emailHero.value) || (emailCta && emailCta.value) || '';
-      window.location.href = 'https://sport-paris.beehiiv.com/subscribe?email=' + encodeURIComponent(email) + '&utm_source=parissportweek';
+
+      const params = new URLSearchParams();
+      params.append('email', email);
+      params.append('publication_id', 'pub_36df61d2-bbfc-486f-a232-8d69ce2d8c3e');
+      params.append('utm_source', 'parissportweek');
+      params.append('double_opt_override', 'off');
+      params.append('reactivate_existing', 'false');
+      params.append('send_welcome_email', 'true');
+
+      fetch('https://app.beehiiv.com/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString(),
+        mode: 'no-cors'
+      });
+
+      document.querySelectorAll('.form-wrap').forEach(el => {
+        el.innerHTML = '<p style="font-family:\'Space Mono\',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#89B8E8;margin-top:8px;">Bienvenue. Check ta boîte.</p>';
+      });
+      const ctaForm = document.querySelector('.cta-form');
+      if (ctaForm) ctaForm.innerHTML = '<p style="font-family:\'Space Mono\',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#89B8E8;">Bienvenue. Check ta boîte.</p>';
     }
   </script>
 
