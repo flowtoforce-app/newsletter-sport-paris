@@ -1,4 +1,18 @@
 {
   "version": 2,
-  "builds": [{ "src": "index.html", "use": "@vercel/static" }]
+  "builds": [{ "src": "index.html", "use": "@vercel/static" }],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "parissportweek.com" }],
+      "destination": "https://parissportweek.fr/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.parissportweek.com" }],
+      "destination": "https://parissportweek.fr/$1",
+      "permanent": true
+    }
+  ]
 }
