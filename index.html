@@ -648,26 +648,18 @@
   <script>
     function handleSubmit(e) {
       e.preventDefault();
-      const emailHero = document.getElementById('email-hero');
-      const emailCta = document.getElementById('email-cta');
-      const email = (emailHero && emailHero.value) || (emailCta && emailCta.value) || '';
-
-      try {
-        const params = new URLSearchParams();
-        params.append('email', email);
-        params.append('publication_id', 'pub_36df61d2-bbfc-486f-a232-8d69ce2d8c3e');
-        params.append('utm_source', 'parissportweek');
-        fetch('https://app.beehiiv.com/subscribe', {
-          method: 'POST',
-          body: params,
-          mode: 'no-cors'
-        }).catch(function() {});
-      } catch(err) {}
-
+      var emailHero = document.getElementById('email-hero');
+      var emailCta = document.getElementById('email-cta');
+      var email = (emailHero && emailHero.value) || (emailCta && emailCta.value) || '';
       var msg = "<p style=\"font-family:'Space Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#89B8E8;padding:12px 0;\">Merci · Check ta boîte.</p>";
       document.querySelectorAll('.form-wrap').forEach(function(el) { el.innerHTML = msg; });
       var ctaForm = document.querySelector('.cta-form');
       if (ctaForm) ctaForm.innerHTML = msg;
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email })
+      }).catch(function() {});
     }
   </script>
 
