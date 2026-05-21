@@ -1,39 +1,43 @@
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+module.exports = async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-  const { email } = req.body;
+  if (req.method === 'OPTIONS') return res.status(200).end();
+  if (req.method !== 'POST') return res.status(405).end();
 
-  if (!email) {
-    return res.status(400).json({ error: 'Email required' });
-  }
+  let body = '';
+  await new Promise((resolve) => {
+    req.on('data', (chunk) => { body += chunk; });
+    req.on('end', resolve);
+  });
 
+  let email;
   try {
-    const response = await fetch(
-      `https://api.beehiiv.com/v2/publications/pub_36df61d2-bbfc-486f-a232-8d69ce2d8c3e/subscriptions`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.BEEHIIV_API_KEY}`
-        },
-        body: JSON.stringify({
-          email,
-          reactivate_existing: false,
-          send_welcome_email: true,
-          utm_source: 'parissportweek'
-        })
-      }
-    );
-
-    if (!response.ok) {
-      const err = await response.json();
-      return res.status(response.status).json({ error: err });
-    }
-
-    return res.status(200).json({ success: true });
-  } catch (err) {
-    return res.status(500).json({ error: 'Server error' });
+    email = JSON.parse(body).email;
+  } catch (e) {
+    return res.status(400).json({ error: 'Invalid JSON' });
   }
-}
+
+  if (!email) return res.status(400).json({ error: 'Email required' });
+
+  const response = await fetch(
+    'https://api.beehiiv.com/v2/publications/pub_36df61d2-bbfc-486f-a232-8d69ce2d8c3e/subscriptions',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + process.env.BEEHIIV_API_KEY
+      },
+      body: JSON.stringify({
+        email: email,
+        reactivate_existing: false,
+        send_welcome_email: true,
+        utm_source: 'parissportweek'
+      })
+    }
+  );
+
+  const data = await response.json();
+  return res.status(200).json({ success: true, data: data });
+};
