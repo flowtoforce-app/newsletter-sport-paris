@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devenir partenaire · Paris Sport Week</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #000055;
+      --blue: #4169E1;
+      --baby: #89B8E8;
+      --white: #ffffff;
+      --off: #f5f7fd;
+      --text: #2a2f4a;
+      --muted: #9aa0b8;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      padding-top: 60px;
+    }
+
+    /* NAV */
+    .topnav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 60px;
+      background: rgba(0,0,85,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(137,184,232,0.12);
+    }
+
+    .topnav-logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: #ffffff;
+      letter-spacing: 3px;
+      text-decoration: none;
+    }
+
+    .topnav-back {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: rgba(137,184,232,0.6);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    /* PAGE */
+    .page {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 80px 24px 100px;
+    }
+
+    .chip {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--blue);
+      border: 1px solid var(--blue);
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+
+    .page-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .page-title em {
+      font-style: italic;
+      color: var(--blue);
+    }
+
+    .page-sub {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #5a607a;
+      margin-bottom: 52px;
+    }
+
+    /* FORM */
+    .form-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .field-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+
+    .field input,
+    .field textarea {
+      background: var(--off);
+      border: 1px solid #eaecf2;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--blue);
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .btn-submit {
+      display: inline-block;
+      background: var(--blue);
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 14px 40px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    .success-msg {
+      display: none;
+      padding: 40px 0;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+
+    @media (max-width: 600px) {
+      .topnav { padding: 0 20px; }
+      .page { padding: 60px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <a class="topnav-logo" href="/">Paris Sport Week</a>
+    <a class="topnav-back" href="/">Retour</a>
+  </nav>
+
+  <div class="page">
+    <div class="chip">Partenariat</div>
+    <h1 class="page-title">Devenir <em>partenaire</em></h1>
+    <p class="page-sub">Une audience sport Paris, engagée et ciblée. Les marques qui rejoignent maintenant ont l'avantage du timing. Candidatures sur sélection.</p>
+
+    <form class="form-wrap" id="partner-form">
+      <div class="field">
+        <label class="field-label">Nom de l'entreprise</label>
+        <input type="text" name="entreprise" required>
+      </div>
+      <div class="field">
+        <label class="field-label">Email de contact</label>
+        <input type="email" name="email" required>
+      </div>
+      <div class="field">
+        <label class="field-label">Quelle offre souhaitez-vous mettre en avant ?</label>
+        <textarea name="offre" required></textarea>
+      </div>
+      <div class="field">
+        <label class="field-label">Quand souhaitez-vous lancer la campagne ?</label>
+        <input type="text" name="date_lancement">
+      </div>
+      <div class="field">
+        <label class="field-label">Votre offre ou budget</label>
+        <input type="text" name="budget">
+      </div>
+      <button class="btn-submit" type="submit">Postuler</button>
+    </form>
+
+    <div class="success-msg" id="success">
+      Candidature reçue. On revient vers toi rapidement.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('partner-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = document.getElementById('partner-form');
+      var data = new FormData(form);
+      data.append('_subject', 'Nouvelle candidature partenaire Paris Sport Week');
+      data.append('_captcha', 'false');
+      fetch('https://formsubmit.co/ajax/parissportweek@protonmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      })
+      .then(function() {
+        form.style.display = 'none';
+        document.getElementById('success').style.display = 'block';
+      })
+      .catch(function() {
+        form.style.display = 'none';
+        document.getElementById('success').style.display = 'block';
+      });
+    });
+  </script>
+
+</body>
+</html>
