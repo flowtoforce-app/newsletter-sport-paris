@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "rewrites": [
+    { "source": "/partenaire", "destination": "/partner.html" }
+  ],
   "redirects": [
     {
       "source": "/(.*)",
