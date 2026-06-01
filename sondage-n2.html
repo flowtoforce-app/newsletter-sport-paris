@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Sondage · Paris Sport Week</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300&family=Space+Mono:wght@400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f5f5f3;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 540px;
+      padding: 52px 44px 44px;
+      border: 1px solid #eeeeee;
+    }
+
+    .label {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #4169E1;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: #000033;
+      margin-bottom: 36px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #eeeeee;
+      margin-bottom: 36px;
+    }
+
+    .intro {
+      font-size: 15px;
+      color: #333333;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .question {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #000033;
+      line-height: 1.4;
+      margin-bottom: 24px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .option {
+      display: block;
+      padding: 16px 20px;
+      background: #f8f8f8;
+      border: 1px solid #eeeeee;
+      color: #000033;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: left;
+    }
+
+    .option:hover {
+      background: #000033;
+      color: #ffffff;
+      border-color: #000033;
+    }
+
+    .option-letter {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: #4169E1;
+      margin-right: 12px;
+    }
+
+    .option:hover .option-letter {
+      color: #89B8E8;
+    }
+
+    .footer {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #aaaaaa;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="label">N° 02 · Juin 2026</div>
+    <div class="brand">Paris Sport Week</div>
+    <div class="divider"></div>
+
+    <p class="intro">
+      Le sondage de cette semaine n'a pas fonctionné pour certaines d'entre vous.<br>
+      Je t'invite à y répondre ici — dix secondes suffisent.
+    </p>
+
+    <div class="question">Cet été, ton plan d'eau parisien c'est plutôt&nbsp;?</div>
+
+    <div class="options">
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°2&body=Ma réponse : Piscine municipale couverte">
+        <span class="option-letter">A</span>Piscine municipale couverte
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°2&body=Ma réponse : Bassin extérieur">
+        <span class="option-letter">B</span>Bassin extérieur
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°2&body=Ma réponse : Baignade en eau libre (Villette, Seine)">
+        <span class="option-letter">C</span>Baignade en eau libre (Villette, Seine)
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°2&body=Ma réponse : Hors de Paris dès que possible">
+        <span class="option-letter">D</span>Hors de Paris dès que possible
+      </a>
+    </div>
+
+    <div class="footer">Paris Sport Week · parissportweek.fr</div>
+  </div>
+</body>
+</html>
