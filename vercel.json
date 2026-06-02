@@ -2,7 +2,8 @@
   "version": 2,
   "rewrites": [
     { "source": "/partenaire", "destination": "/partner.html" },
-    { "source": "/sondage-n2", "destination": "/sondage-n2.html" }
+    { "source": "/sondage-n2", "destination": "/sondage-n2.html" },
+    { "source": "/sondage-n3", "destination": "/sondage-n3.html" }
   ],
   "redirects": [
     {
