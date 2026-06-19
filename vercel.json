@@ -4,7 +4,8 @@
     { "source": "/partenaire", "destination": "/partner.html" },
     { "source": "/sondage-n2", "destination": "/sondage-n2.html" },
     { "source": "/sondage-n3", "destination": "/sondage-n3.html" },
-    { "source": "/sondage-n4", "destination": "/sondage-n4.html" }
+    { "source": "/sondage-n4", "destination": "/sondage-n4.html" },
+    { "source": "/sondage-n6", "destination": "/sondage-n6.html" }
   ],
   "redirects": [
     {
