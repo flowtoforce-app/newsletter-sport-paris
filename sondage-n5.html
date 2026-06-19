@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Sondage · Paris Sport Week</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono:wght@400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f7f5f2;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 520px;
+      padding: 0;
+      border-radius: 2px;
+      box-shadow: 0 4px 32px rgba(0, 0, 51, 0.06);
+      overflow: hidden;
+    }
+
+    .card-top {
+      height: 4px;
+      background: linear-gradient(90deg, #4169E1, #89B8E8);
+    }
+
+    .card-inner {
+      padding: 48px 44px 44px;
+    }
+
+    .label {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #89B8E8;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 300;
+      color: #000033;
+      margin-bottom: 32px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #f0eeed;
+      margin-bottom: 32px;
+    }
+
+    .intro {
+      font-size: 14px;
+      font-weight: 300;
+      color: #888888;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .question {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 300;
+      font-style: italic;
+      color: #000033;
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px 18px;
+      background: #faf9f7;
+      border: 1px solid #eeebe7;
+      border-radius: 2px;
+      color: #2a2f4a;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .option:hover {
+      background: #000033;
+      color: #ffffff;
+      border-color: #000033;
+    }
+
+    .option-letter {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: #4169E1;
+      flex-shrink: 0;
+    }
+
+    .option:hover .option-letter {
+      color: #89B8E8;
+    }
+
+    .footer {
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      letter-spacing: 2px;
+      color: #bbbbbb;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-top"></div>
+    <div class="card-inner">
+
+      <div class="label">N° 05 · Juin 2026</div>
+      <div class="brand">Paris Sport Week</div>
+      <div class="divider"></div>
+
+      <p class="intro">Un seul clic. Ton avis nous aide à construire la suite.</p>
+
+      <div class="question">La danse dans ta vie, c'est quoi&nbsp;?</div>
+
+      <div class="options">
+        <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°5&body=Ma réponse : Un cours régulier, c'est une vraie pratique pour moi">
+          <span class="option-letter">A</span>Un cours régulier, c'est une vraie pratique pour moi
+        </a>
+        <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°5&body=Ma réponse : En soirée ou en fête, de manière libre et spontanée">
+          <span class="option-letter">B</span>En soirée ou en fête, de manière libre et spontanée
+        </a>
+        <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°5&body=Ma réponse : Je l'admire, mais je ne pratique pas">
+          <span class="option-letter">C</span>Je l'admire, mais je ne pratique pas
+        </a>
+        <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°5&body=Ma réponse : C'est dans ma tête depuis longtemps, je n'ai pas encore sauté le pas">
+          <span class="option-letter">D</span>C'est dans ma tête depuis longtemps, je n'ai pas encore sauté le pas
+        </a>
+      </div>
+
+      <div class="footer">Paris Sport Week · parissportweek.fr</div>
+
+    </div>
+  </div>
+</body>
+</html>
