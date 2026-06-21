@@ -286,48 +286,132 @@
       color: #5a607a;
     }
 
-    /* TEASER */
-    .teaser {
-      background: var(--navy);
-      border-radius: 16px;
-      padding: 40px;
-      margin-top: 0;
+    /* CAROUSEL */
+    .carousel-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      cursor: grab;
+      padding-bottom: 8px;
+    }
+    .carousel-wrap::-webkit-scrollbar { display: none; }
+    .carousel-wrap:active { cursor: grabbing; }
+
+    .carousel {
+      display: flex;
+      gap: 16px;
+      width: max-content;
     }
 
-    .teaser-chip {
+    .nl-card {
+      width: 260px;
+      height: 360px;
+      border-radius: 16px;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+      background: var(--navy);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nl-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    .nl-card-body {
+      position: absolute;
+      inset: 0;
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(to bottom, rgba(0,0,50,0.2) 0%, rgba(0,0,50,0.85) 60%);
+    }
+
+    .nl-card-num {
       font-family: 'Space Mono', monospace;
       font-size: 9px;
-      letter-spacing: 2px;
-      color: var(--baby);
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      color: var(--baby);
+      margin-bottom: 10px;
     }
 
-    .teaser-title {
+    .nl-card-theme {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 22px;
+      font-size: 18px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .nl-card-sub {
+      font-size: 12px;
       font-weight: 300;
-      color: var(--white);
-      margin-bottom: 16px;
-      line-height: 1.35;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
     }
 
-    .teaser-text {
-      font-size: 14px;
-      line-height: 1.8;
-      color: rgba(255,255,255,0.6);
-      margin-bottom: 24px;
+    .nl-card-placeholder {
+      position: absolute;
+      inset: 0;
+      padding: 28px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .teaser-cta {
+    .nl-card-top-label {
       font-family: 'Space Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 1.5px;
+      font-size: 9px;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--baby);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(137,184,232,0.4);
-      padding-bottom: 2px;
+      color: rgba(137,184,232,0.5);
+    }
+
+    .nl-card-center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .nl-card-big-num {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 52px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.07);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .nl-card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .nl-card-desc {
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.55;
+    }
+
+    .nl-card-date {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(137,184,232,0.4);
     }
 
     /* LYS BIO */
@@ -712,15 +796,76 @@
     </div>
   </section>
 
-  <!-- TEASER N°1 -->
+  <!-- CARROUSEL NEWSLETTERS -->
   <section class="section">
-    <div class="chip">Aperçu · N°01</div>
-    <h2 class="section-title">Le Reformer Pilates<br><em>d'où ça vient, pourquoi Paris en est fou</em></h2>
-    <div class="teaser">
-      <div class="teaser-chip">L'Ouverture · Numéro 1</div>
-      <div class="teaser-title">Ce n'est pas une tendance qui vient de nulle part.</div>
-      <div class="teaser-text">Joseph Pilates naît en 1883, enfant asthmatique. L'embryon du Reformer naît pendant la Première Guerre mondiale. Paris découvre la méthode tardivement. Puis l'accélération...</div>
-      <a class="teaser-cta" href="#cta">Lire la suite en s'abonnant</a>
+    <div class="chip">Les éditions</div>
+    <h2 class="section-title">Ce qu'on écrit<br><em>chaque lundi</em></h2>
+    <div class="carousel-wrap" id="carousel">
+      <div class="carousel">
+
+        <!-- N°01 — screenshot réel -->
+        <div class="nl-card">
+          <img class="nl-card-img" src="/newsletter-n1-screenshot.png" alt="Paris Sport Week N°01">
+          <div class="nl-card-body">
+            <div class="nl-card-num">N° 01 · Mai 2026</div>
+            <div class="nl-card-theme">Le Reformer Pilates</div>
+            <div class="nl-card-sub">D'où ça vient, pourquoi Paris en est fou.</div>
+          </div>
+        </div>
+
+        <!-- N°02 -->
+        <div class="nl-card">
+          <div class="nl-card-placeholder">
+            <div class="nl-card-top-label">N° 02 · Juin 2026</div>
+            <div class="nl-card-center">
+              <div class="nl-card-big-num">02</div>
+              <div class="nl-card-title">Dehors,<br>ensemble</div>
+              <div class="nl-card-desc">Sports collectifs, plein air, run clubs. Paris bouge autrement dès que le soleil revient.</div>
+            </div>
+            <div class="nl-card-date">1er juin 2026</div>
+          </div>
+        </div>
+
+        <!-- N°03 -->
+        <div class="nl-card">
+          <div class="nl-card-placeholder">
+            <div class="nl-card-top-label">N° 03 · Juin 2026</div>
+            <div class="nl-card-center">
+              <div class="nl-card-big-num">03</div>
+              <div class="nl-card-title">Les piscines<br>de Paris</div>
+              <div class="nl-card-desc">Histoire, spots secrets, bienfaits. Ce que l'eau fait au corps — et à la tête.</div>
+            </div>
+            <div class="nl-card-date">8 juin 2026</div>
+          </div>
+        </div>
+
+        <!-- N°04 -->
+        <div class="nl-card">
+          <div class="nl-card-placeholder">
+            <div class="nl-card-top-label">N° 04 · Juin 2026</div>
+            <div class="nl-card-center">
+              <div class="nl-card-big-num">04</div>
+              <div class="nl-card-title">La Coupe<br>du Monde</div>
+              <div class="nl-card-desc">Le foot vu de Paris. Histoire du trophée, des Bleues, et du sport le plus collectif du monde.</div>
+            </div>
+            <div class="nl-card-date">15 juin 2026</div>
+          </div>
+        </div>
+
+        <!-- N°05 -->
+        <div class="nl-card">
+          <div class="nl-card-placeholder">
+            <div class="nl-card-top-label">N° 05 · Juin 2026</div>
+            <div class="nl-card-center">
+              <div class="nl-card-big-num">05</div>
+              <div class="nl-card-title">La Danse</div>
+              <div class="nl-card-desc">Le sport le plus complet du monde ne ressemble pas à du sport. 11 millions de pratiquants, 88 000 licenciés.</div>
+            </div>
+            <div class="nl-card-date">22 juin 2026</div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -794,6 +939,17 @@
         document.getElementById('partner-success').style.display = 'block';
       });
     });
+
+    // Carousel drag-to-scroll
+    (function() {
+      var c = document.getElementById('carousel');
+      if (!c) return;
+      var isDown = false, startX, scrollLeft;
+      c.addEventListener('mousedown', function(e) { isDown = true; startX = e.pageX - c.offsetLeft; scrollLeft = c.scrollLeft; });
+      c.addEventListener('mouseleave', function() { isDown = false; });
+      c.addEventListener('mouseup', function() { isDown = false; });
+      c.addEventListener('mousemove', function(e) { if (!isDown) return; e.preventDefault(); var x = e.pageX - c.offsetLeft; c.scrollLeft = scrollLeft - (x - startX); });
+    })();
 
     function handleSubmit(e) {
       e.preventDefault();
