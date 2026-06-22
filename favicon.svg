@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#000055"/>
-  <text x="16" y="13" font-family="Georgia, serif" font-size="8" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="0.3">Paris</text>
-  <text x="16" y="21" font-family="Georgia, serif" font-size="8" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="0.3">Sport</text>
-  <text x="16" y="29" font-family="Georgia, serif" font-size="8" font-weight="400" fill="#89B8E8" text-anchor="middle" letter-spacing="0.3">Week</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#000055"/>
+  <text x="32" y="30" font-family="Georgia, serif" font-size="11" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">Paris Sport</text>
+  <text x="32" y="46" font-family="Georgia, serif" font-size="14" font-weight="400" fill="#89B8E8" text-anchor="middle" letter-spacing="0.5">Week</text>
 </svg>
