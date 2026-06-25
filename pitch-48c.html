@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paris Sport Week · Newsletter</title>
+  <link rel="icon" type="image/png" href="Cerveau/1 Projet/06 Newsletter Sport Paris/newsletter-signup-site/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #000055;
+      --blue: #4169E1;
+      --baby: #89B8E8;
+      --white: #ffffff;
+      --off: #f5f7fd;
+      --text: #2a2f4a;
+      --muted: #9aa0b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--off); color: var(--text); }
+
+    /* HERO */
+    .hero { background: var(--navy); padding: 64px 28px 56px; text-align: center; }
+    .hero-chip {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--baby); border: 1px solid rgba(137,184,232,0.3);
+      padding: 5px 12px; border-radius: 20px; margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px; font-weight: 700; color: var(--white);
+      line-height: 1.05; letter-spacing: -1px; margin-bottom: 20px;
+    }
+    .hero h1 em { color: var(--baby); font-style: italic; }
+    .hero-desc {
+      font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.6);
+      line-height: 1.75; max-width: 300px; margin: 0 auto;
+    }
+
+    /* BLOCS */
+    .bloc { background: var(--white); margin-top: 10px; padding: 44px 28px; }
+    .bloc-dark { background: var(--navy); margin-top: 10px; padding: 44px 28px; }
+    .chip {
+      font-family: 'Space Mono', monospace; font-size: 9px;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 14px; display: block;
+    }
+    .bloc-dark .chip { color: var(--baby); }
+    h2 {
+      font-family: 'Playfair Display', serif; font-size: 24px;
+      font-weight: 600; color: var(--navy); line-height: 1.2;
+      margin-bottom: 16px; white-space: nowrap;
+    }
+    .bloc-dark h2 { color: var(--white); }
+    p { font-size: 14px; font-weight: 300; line-height: 1.85; color: #555e7a; }
+    p strong { font-weight: 500; color: var(--text); }
+    .bloc-dark p { color: rgba(255,255,255,0.65); }
+    .bloc-dark p strong { color: white; font-weight: 400; }
+
+    /* RUBRIQUES */
+    .rubriques { margin-top: 28px; display: flex; flex-direction: column; }
+    .rubrique {
+      padding: 18px 0; border-bottom: 1px solid #eef0f8;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .rubrique:last-child { border-bottom: none; }
+    .rubrique-num {
+      font-family: 'Space Mono', monospace; font-size: 10px;
+      color: var(--baby); padding-top: 3px; flex-shrink: 0; width: 24px;
+    }
+    .rubrique-name {
+      font-family: 'Playfair Display', serif; font-size: 15px;
+      font-weight: 600; color: var(--navy); margin-bottom: 4px;
+    }
+    .rubrique-desc { font-size: 12px; font-weight: 300; color: #888; line-height: 1.6; }
+    .rubrique.featured .rubrique-name { color: var(--blue); }
+    .rubrique.featured .rubrique-desc { color: var(--blue); opacity: 0.8; }
+
+    /* PHONES SCROLL */
+    .phones-scroll-wrap {
+      margin-top: 28px; overflow-x: auto; padding-bottom: 16px; scrollbar-width: none;
+    }
+    .phones-scroll-wrap::-webkit-scrollbar { display: none; }
+    .phones-row { display: flex; gap: 14px; width: max-content; align-items: flex-start; padding: 10px 4px; }
+    .phone {
+      width: 148px; height: 300px;
+      border: 3px solid var(--navy); border-radius: 28px;
+      overflow: hidden; position: relative; background: white;
+      box-shadow: 0 12px 36px rgba(0,0,85,0.12);
+      flex-shrink: 0; cursor: zoom-in;
+    }
+    .phone::before {
+      content: ''; position: absolute; top: 8px; left: 50%;
+      transform: translateX(-50%); width: 38px; height: 4px;
+      background: var(--navy); border-radius: 2px; z-index: 10;
+    }
+    .phone img { width: 100%; height: auto; display: block; margin-top: 20px; }
+    .phones-caption {
+      margin-top: 14px; text-align: center;
+      font-family: 'Space Mono', monospace; font-size: 9px;
+      letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted);
+    }
+
+    /* KAH PHONES */
+    .kah-phones { display: flex; gap: 16px; justify-content: center; margin-top: 28px; }
+    .phone-kah {
+      width: 190px; height: 380px;
+      border: 3px solid var(--navy); border-radius: 30px;
+      overflow: hidden; position: relative; background: white;
+      box-shadow: 0 16px 48px rgba(0,0,85,0.13);
+      cursor: zoom-in;
+    }
+    .phone-kah::before {
+      content: ''; position: absolute; top: 10px; left: 50%;
+      transform: translateX(-50%); width: 42px; height: 4px;
+      background: var(--navy); border-radius: 2px; z-index: 10;
+    }
+    .phone-kah img { width: 100%; height: auto; display: block; }
+    .phone-kah.top img { margin-top: 22px; }
+    .phone-kah.photos img {
+      width: 100%; height: 358px;
+      object-fit: cover; object-position: bottom;
+      display: block; margin-top: 22px;
+    }
+
+    /* PARTENAIRE TAG */
+    .partenaire-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--off); border: 1px solid #dde1f0;
+      border-radius: 20px; padding: 6px 14px; margin-bottom: 24px;
+    }
+    .partenaire-tag span {
+      font-family: 'Space Mono', monospace; font-size: 9px;
+      letter-spacing: 1.5px; text-transform: uppercase; color: var(--navy);
+    }
+    .partenaire-tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+
+    /* FIT ITEMS */
+    .fit-item { margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .fit-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .fit-item-title {
+      font-family: 'Space Mono', monospace; font-size: 9px;
+      letter-spacing: 2px; text-transform: uppercase; color: var(--baby); margin-bottom: 8px;
+    }
+    .fit-item p { font-size: 13px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.6); }
+    .fit-item p strong { color: white; font-weight: 400; }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,20,0.92); z-index: 1000;
+      align-items: center; justify-content: center;
+      padding: 24px; cursor: zoom-out;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: min(480px, 90vw); max-height: 90vh;
+      border-radius: 16px; box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 24px;
+      font-family: 'Space Mono', monospace; font-size: 10px;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); cursor: pointer;
+    }
+
+    /* FOOTER */
+    .footer { background: var(--navy); padding: 40px 28px; text-align: center; margin-top: 10px; }
+    .footer-name { font-family: 'Playfair Display', serif; font-size: 20px; color: white; margin-bottom: 8px; }
+    .footer-url {
+      font-family: 'Space Mono', monospace; font-size: 10px;
+      letter-spacing: 1px; color: var(--baby); text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">Fermer</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-chip">Présentation partenariat</div>
+    <h1>Paris<br><em>Sport Week</em></h1>
+    <p class="hero-desc">La newsletter sport et wellness parisienne. Chaque lundi à 11h.</p>
+  </div>
+
+  <!-- CE QU'ON FAIT -->
+  <div class="bloc-dark">
+    <span class="chip">Ce qu'on fait</span>
+    <h2>Le sport parisien, de l'intérieur.</h2>
+    <p>
+      Je suis coach diplômée, prof de yoga, ancienne gymnaste. Depuis l'enfance, le sport fait partie de ma vie. Et depuis le début, cette envie de découvrir ce qui est nouveau, de tester, de me documenter. Je lis beaucoup pour aller chercher ce qui est précis, utile, intéressant. <strong>Paris Sport Week, c'est ce que je partage chaque lundi.</strong>
+    </p>
+  </div>
+
+  <!-- RUBRIQUES -->
+  <div class="bloc">
+    <span class="chip">Le format</span>
+    <h2>8 rubriques. Un partenaire par mois.</h2>
+    <div class="rubriques">
+      <div class="rubrique">
+        <div class="rubrique-num">01</div>
+        <div class="rubrique-body">
+          <div class="rubrique-name">L'Échauffement</div>
+          <div class="rubrique-desc">La tendance sport de la semaine, développée avec précision.</div>
+        </div>
+      </div>
+      <div class="rubrique">
+        <div class="rubrique-num">02</div>
+        <div class="rubrique-body">
+          <div class="rubrique-name">Le Vestiaire</div>
+          <div class="rubrique-desc">Une innovation par numéro. App, équipement, tech. Sourcé et développé.</div>
+        </div>
+      </div>
+      <div class="rubrique">
+        <div class="rubrique-num">03</div>
+        <div class="rubrique-body">
+          <div class="rubrique-name">Le Spot</div>
+          <div class="rubrique-desc">Un lieu, un coach, un concept. L'adresse sport ou wellness du moment à Paris.</div>
+        </div>
+      </div>
+      <div class="rubrique featured">
+        <div class="rubrique-num">04</div>
+        <div class="rubrique-body">
+          <div class="rubrique-name">Le Partenaire</div>
+          <div class="rubrique-desc">Une seule marque par mois. Format éditorial. Offre exclusive réservée aux abonnés.</div>
+        </div>
+      </div>
+      <div class="rubrique">
+        <div class="rubrique-num">05</div>
+        <div class="rubrique-body">
+          <div class="rubrique-name">L'Agenda</div>
+          <div class="rubrique-desc">Les events sport et wellness parisiens du moment, sélectionnés.</div>
+        </div>
+      </div>
+      <div class="rubrique">
+        <div class="rubrique-num">06</div>
+        <div class="rubrique-body">
+          <div class="rubrique-name">Le Film</div>
+          <div class="rubrique-desc">Un film ou documentaire autour du thème du numéro, décrypté.</div>
+        </div>
+      </div>
+      <div class="rubrique">
+        <div class="rubrique-num">07</div>
+        <div class="rubrique-body">
+          <div class="rubrique-name">La Stat</div>
+          <div class="rubrique-desc">Un seul chiffre. Sourcé. Celui qui éclaire autrement.</div>
+        </div>
+      </div>
+      <div class="rubrique">
+        <div class="rubrique-num">08</div>
+        <div class="rubrique-body">
+          <div class="rubrique-name">L'Œil de Lys</div>
+          <div class="rubrique-desc">Une conclusion personnelle. Des faits, un regard, ce que j'y ajoute.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHONES SCROLL -->
+  <div class="bloc" style="border-top: 1px solid #eef0f8; padding-bottom: 36px;">
+    <span class="chip">La newsletter</span>
+    <h2>N°01 · Le Reformer Pilates.</h2>
+    <div class="phones-scroll-wrap">
+      <div class="phones-row">
+        <div class="phone zoomable" data-src="sections/02_intro.png">
+          <img src="sections/02_intro.png" alt="Bienvenue">
+        </div>
+        <div class="phone zoomable" data-src="sections/03_echauffement.png">
+          <img src="sections/03_echauffement.png" alt="L'Échauffement">
+        </div>
+        <div class="phone zoomable" data-src="sections/04_radar.png">
+          <img src="sections/04_radar.png" alt="Le Radar">
+        </div>
+        <div class="phone zoomable" data-src="sections/05_spot.png">
+          <img src="sections/05_spot.png" alt="Le Spot">
+        </div>
+        <div class="phone zoomable" data-src="sections/07_agenda.png">
+          <img src="sections/07_agenda.png" alt="L'Agenda">
+        </div>
+        <div class="phone zoomable" data-src="sections/08_film.png">
+          <img src="sections/08_film.png" alt="Le Film">
+        </div>
+        <div class="phone zoomable" data-src="sections/09_stat.png">
+          <img src="sections/09_stat.png" alt="La Stat">
+        </div>
+        <div class="phone zoomable" data-src="sections/10_oeil_de_lys.png">
+          <img src="sections/10_oeil_de_lys.png" alt="L'Œil de Lys">
+        </div>
+      </div>
+    </div>
+    <p class="phones-caption">Cliquer pour zoomer · Faire défiler</p>
+  </div>
+
+  <!-- PARTENAIRE KAH -->
+  <div class="bloc">
+    <div class="partenaire-tag">
+      <div class="dot"></div>
+      <span>Le Partenaire · 1 mois · exclusif abonnés</span>
+    </div>
+    <span class="chip">Un exemple</span>
+    <h2>KAH Studio & Coffee.</h2>
+    <p>
+      Le format est simple. Une section éditoriale dédiée à la marque et une offre exclusive pour les abonnés, pendant un mois. Le premier partenariat Paris Sport Week, c'était <strong>KAH Studio & Coffee</strong>, rue Bichat dans le 10e.
+    </p>
+    <div class="kah-phones">
+      <div class="phone-kah top zoomable" data-src="sections/06_partenaire.png">
+        <img src="sections/06_partenaire.png" alt="KAH article">
+      </div>
+      <div class="phone-kah zoomable" data-src="kah_insta_post.png" style="display:flex; align-items:center; justify-content:center;">
+        <img src="kah_insta_post.png" style="width:100%; height:auto; display:block; max-height:358px; object-fit:contain;" alt="KAH Instagram">
+      </div>
+    </div>
+  </div>
+
+  <!-- 48C -->
+  <div class="bloc-dark">
+    <span class="chip">Pourquoi 48c</span>
+    <h2>Ce qu'on propose à 48c.</h2>
+    <div style="margin-top: 24px;">
+      <div class="fit-item">
+        <div class="fit-item-title">La cible</div>
+        <p>Les abonnés Paris Sport Week bougent, font attention à ce qu'ils mettent dans leur corps, cherchent des marques avec un positionnement réel. <strong>C'est la cible 48c.</strong></p>
+      </div>
+      <div class="fit-item">
+        <div class="fit-item-title">L'angle éditorial</div>
+        <p>Collagène, récupération, articulations, performance dans la durée. <strong>La rubrique Le Partenaire se construit autour du produit,</strong> dans la continuité du thème du numéro.</p>
+      </div>
+      <div class="fit-item">
+        <div class="fit-item-title">Une recommandation sincère</div>
+        <p>48c, c'est une marque qui me parle. Et surtout <strong>la façon dont Amandine travaille</strong> : elle se documente, elle bosse dur. C'est authentique, c'est sincère. C'est exactement ce que j'essaie de faire avec Paris Sport Week.</p>
+      </div>
+      <div class="fit-item">
+        <div class="fit-item-title">Un mois, une marque</div>
+        <p><strong>Toute l'attention des abonnés sur 48c.</strong> Aucune autre marque ce mois-là.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSTAGRAM -->
+  <div class="bloc">
+    <span class="chip">Instagram</span>
+    <div style="display:flex; align-items:center; gap:9px; margin-top:12px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+        <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="var(--navy)" stroke-width="2" fill="none"/>
+        <circle cx="12" cy="12" r="4" stroke="var(--navy)" stroke-width="2" fill="none"/>
+        <circle cx="17.5" cy="6.5" r="1.3" fill="var(--navy)"/>
+      </svg>
+      <a href="https://www.instagram.com/paris_sport_week/" target="_blank" style="font-family:'Playfair Display',serif; font-weight:700; font-size:17px; color:var(--navy); text-decoration:none;">@paris_sport_week</a>
+    </div>
+    <div class="insta-phones" style="margin-top:28px; display:flex; gap:14px; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
+
+      <!-- Phone 1 : profil (portrait 1290x2796 → remplit parfaitement) -->
+      <div class="phone zoomable" data-src="insta_profil.png" style="width:150px; height:326px; border:3px solid var(--navy); border-radius:28px; overflow:hidden; position:relative; background:white; box-shadow:0 12px 36px rgba(0,0,85,0.12); cursor:zoom-in; flex-shrink:0;">
+        <div style="position:absolute;top:8px;left:50%;transform:translateX(-50%);width:38px;height:4px;background:var(--navy);border-radius:2px;z-index:10;"></div>
+        <img src="insta_profil.png" style="width:100%; height:306px; object-fit:contain; object-position:top; display:block; margin-top:20px;" alt="Profil Instagram">
+      </div>
+
+      <!-- Phone 2 : feed (paysage, dezoom complet) -->
+      <div class="phone zoomable" data-src="insta_feed.png" style="width:150px; height:326px; border:3px solid var(--navy); border-radius:28px; overflow:hidden; position:relative; background:white; box-shadow:0 12px 36px rgba(0,0,85,0.12); cursor:zoom-in; flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+        <div style="position:absolute;top:8px;left:50%;transform:translateX(-50%);width:38px;height:4px;background:var(--navy);border-radius:2px;z-index:10;"></div>
+        <img src="insta_feed.png" style="width:100%; height:auto; max-height:306px; object-fit:contain; display:block; margin-top:20px;" alt="Feed Instagram">
+      </div>
+
+      <!-- Phone 3 : post KAH (paysage, dezoom complet) -->
+      <div class="phone zoomable" data-src="insta_kah.png" style="width:150px; height:326px; border:3px solid var(--navy); border-radius:28px; overflow:hidden; position:relative; background:white; box-shadow:0 12px 36px rgba(0,0,85,0.12); cursor:zoom-in; flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+        <div style="position:absolute;top:8px;left:50%;transform:translateX(-50%);width:38px;height:4px;background:var(--navy);border-radius:2px;z-index:10;"></div>
+        <img src="insta_kah.png" style="width:100%; height:auto; max-height:306px; object-fit:contain; display:block; margin-top:20px;" alt="Post KAH">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-name">Paris Sport Week</div>
+    <a href="https://parissportweek.fr" class="footer-url">parissportweek.fr</a>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.zoomable').forEach(el => {
+      el.addEventListener('click', () => {
+        lightboxImg.src = el.dataset.src;
+        lightbox.classList.add('open');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('open');
+      lightboxImg.src = '';
+    });
+  </script>
+</body>
+</html>
