@@ -6,7 +6,8 @@
     { "source": "/sondage-n3", "destination": "/sondage-n3.html" },
     { "source": "/sondage-n4", "destination": "/sondage-n4.html" },
     { "source": "/sondage-n5", "destination": "/sondage-n5.html" },
-    { "source": "/sondage-n6", "destination": "/sondage-n6.html" }
+    { "source": "/sondage-n6", "destination": "/sondage-n6.html" },
+    { "source": "/sondage-n7", "destination": "/sondage-n7.html" }
   ],
   "redirects": [
     {
