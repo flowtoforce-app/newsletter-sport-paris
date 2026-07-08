@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Sondage · Paris Sport Week</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300&family=Space+Mono:wght@400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f5f5f3;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 540px;
+      padding: 52px 44px 44px;
+      border: 1px solid #eeeeee;
+    }
+
+    .label {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #4169E1;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: #000033;
+      margin-bottom: 36px;
+    }
+
+    .divider {
+      height: 1px;
+      background: #eeeeee;
+      margin-bottom: 36px;
+    }
+
+    .intro {
+      font-size: 15px;
+      color: #333333;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .question {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      font-style: italic;
+      color: #000033;
+      line-height: 1.4;
+      margin-bottom: 32px;
+    }
+
+    /* Oui / Non */
+    .binary-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .btn-binary {
+      display: block;
+      padding: 18px 20px;
+      background: #f8f8f8;
+      border: 1px solid #eeeeee;
+      color: #000033;
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-binary:hover {
+      background: #000033;
+      color: #ffffff;
+      border-color: #000033;
+    }
+
+    /* Séparateur texte */
+    .or-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #bbbbbb;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    /* Zone texte libre */
+    .hesitation-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #000033;
+      margin-bottom: 12px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 14px 16px;
+      border: 1px solid #eeeeee;
+      background: #f8f8f8;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #333333;
+      line-height: 1.6;
+      resize: none;
+      outline: none;
+      transition: border-color 0.15s ease;
+      margin-bottom: 12px;
+    }
+
+    textarea:focus {
+      border-color: #89B8E8;
+      background: #ffffff;
+    }
+
+    textarea::placeholder {
+      color: #bbbbbb;
+    }
+
+    .btn-send {
+      display: block;
+      width: 100%;
+      padding: 16px 20px;
+      background: #000033;
+      color: #ffffff;
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.15s ease;
+      margin-bottom: 40px;
+    }
+
+    .btn-send:hover { opacity: 0.8; }
+
+    .footer {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #aaaaaa;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="label">N° 08 · Juillet 2026</div>
+    <div class="brand">Paris Sport Week</div>
+    <div class="divider"></div>
+
+    <p class="intro">Un seul clic — ou quelques mots. Ton avis nous aide à construire la suite.</p>
+
+    <div class="question">Tu prends de la créatine&nbsp;?</div>
+
+    <div class="binary-row">
+      <a class="btn-binary" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°8&body=Ma réponse : Oui, je prends de la créatine.">
+        Oui
+      </a>
+      <a class="btn-binary" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°8&body=Ma réponse : Non, je ne prends pas de créatine.">
+        Non
+      </a>
+    </div>
+
+    <div class="or-label">ou</div>
+
+    <div class="hesitation-label">Tu hésites ? Dis-nous pourquoi.</div>
+    <textarea id="hesitation" placeholder="Écris ta réponse ici..."></textarea>
+    <button class="btn-send" onclick="sendHesitation()">Envoyer ma réponse</button>
+
+    <div class="footer">Paris Sport Week · parissportweek.fr</div>
+  </div>
+
+  <script>
+    function sendHesitation() {
+      const text = document.getElementById('hesitation').value.trim();
+      if (!text) return;
+      const subject = encodeURIComponent('Sondage PSW N°8 — Hésitation créatine');
+      const body = encodeURIComponent('Ma réponse : ' + text);
+      window.location.href = 'mailto:parissportweek@protonmail.com?subject=' + subject + '&body=' + body;
+    }
+  </script>
+</body>
+</html>
