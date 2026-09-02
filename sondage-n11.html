@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Sondage · Paris Sport Week</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #000055;
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(65, 105, 225, 0.35), transparent 45%),
+        radial-gradient(circle at 90% 85%, rgba(137, 184, 232, 0.25), transparent 50%);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 560px;
+      padding: 52px 44px 44px;
+      border-radius: 22px;
+      border: 3px dotted #4169E1;
+      box-shadow: 0 30px 70px rgba(0, 0, 51, 0.45);
+    }
+
+    .label {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #4169E1;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 300;
+      color: #000055;
+      margin-bottom: 8px;
+    }
+
+    .brand em {
+      font-style: normal;
+      color: #4169E1;
+    }
+
+    .tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #9aa0b8;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, #4169E1, #89B8E8 60%, transparent);
+      margin-bottom: 32px;
+    }
+
+    .intro {
+      font-size: 15px;
+      color: #2a2f4a;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .question {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 25px;
+      color: #000055;
+      line-height: 1.35;
+      margin-bottom: 28px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 17px 22px;
+      background: #f5f7fd;
+      border: 1px solid #e4e9f7;
+      border-radius: 999px;
+      color: #000055;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .option:hover {
+      background: #000055;
+      color: #ffffff;
+      border-color: #000055;
+      transform: translateX(4px);
+    }
+
+    .option-letter {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #4169E1;
+      color: #ffffff;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .option:hover .option-letter {
+      background: #89B8E8;
+      color: #000055;
+    }
+
+    .footer {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #aaaaaa;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="label">N° 11 · Septembre 2026</div>
+    <div class="brand">Paris Sport <em>Week</em></div>
+    <div class="tagline">PSW Coaching arrive</div>
+    <div class="divider"></div>
+
+    <p class="intro">Un seul clic. Ton avis nous aide à construire la suite.</p>
+
+    <div class="question">Avec le lancement de PSW Coaching, tu es plutôt&nbsp;:</div>
+
+    <div class="options">
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°11&body=Ma réponse : Je vais tester et répondre au questionnaire">
+        <span class="option-letter">A</span>Je vais tester et répondre au questionnaire
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°11&body=Ma réponse : J'aimerais encore plus d'infos, d'explications">
+        <span class="option-letter">B</span>J'aimerais encore plus d'infos, d'explications
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°11&body=Ma réponse : J'hésite encore">
+        <span class="option-letter">C</span>J'hésite encore
+      </a>
+    </div>
+
+    <div class="footer">Paris Sport Week · parissportweek.fr</div>
+  </div>
+</body>
+</html>

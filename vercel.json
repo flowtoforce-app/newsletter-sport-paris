@@ -10,7 +10,8 @@
     { "source": "/sondage-n7", "destination": "/sondage-n7.html" },
     { "source": "/sondage-n8", "destination": "/sondage-n8.html" },
     { "source": "/sondage-n9", "destination": "/sondage-n9.html" },
-    { "source": "/sondage-n10", "destination": "/sondage-n10.html" }
+    { "source": "/sondage-n10", "destination": "/sondage-n10.html" },
+    { "source": "/sondage-n11", "destination": "/sondage-n11.html" }
   ],
   "redirects": [
     {
