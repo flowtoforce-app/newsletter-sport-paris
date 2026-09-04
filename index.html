@@ -825,33 +825,10 @@
 
   <!-- HERO -->
   <section class="hero">
-    <h1 class="hero-title">
-      <div style="display:inline-block;background:#ffffff;border-radius:12px;padding:14px 22px 8px;box-shadow:0 12px 32px rgba(0,0,0,0.35);">
-        <svg viewBox="0 0 600 260" preserveAspectRatio="xMinYMid meet" style="width:clamp(140px,26vw,260px);height:auto;display:block;overflow:visible;">
-          <defs>
-            <clipPath id="clipPSWhero">
-              <text x="0" y="190" font-family="'Archivo Black', sans-serif" font-size="150" letter-spacing="-14">PSW</text>
-            </clipPath>
-            <linearGradient id="gradPSWhero" gradientUnits="userSpaceOnUse" x1="0" y1="30" x2="440" y2="220">
-              <stop offset="0%" stop-color="#1E1B19"/>
-              <stop offset="32%" stop-color="#453F3A"/>
-              <stop offset="65%" stop-color="#847E75"/>
-              <stop offset="100%" stop-color="#B3AEA5"/>
-            </linearGradient>
-            <filter id="cloudPSWhero" x="-40%" y="-40%" width="180%" height="180%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="3" seed="21" result="n"/>
-              <feGaussianBlur in="n" stdDeviation="6" result="nb"/>
-              <feDisplacementMap in="SourceGraphic" in2="nb" scale="55" xChannelSelector="R" yChannelSelector="G"/>
-            </filter>
-          </defs>
-          <g clip-path="url(#clipPSWhero)">
-            <rect x="-40" y="-40" width="680" height="340" fill="url(#gradPSWhero)" filter="url(#cloudPSWhero)"/>
-          </g>
-        </svg>
-      </div>
-    </h1>
+    <h1 class="hero-title">PSW</h1>
 
     <div class="hero-bubbles">
+      <a class="hero-bubble outline" href="mailto:parissportweek@protonmail.com">Me booker</a>
       <div class="form-wrap">
         <form class="form-row" onsubmit="handleSubmit(event)">
           <input type="email" id="email-hero" placeholder="ton@email.com" required>
