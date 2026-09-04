@@ -808,175 +808,33 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-collab">En collaboration avec Thomas Néaume</div>
     <h1 class="hero-title">Paris Sport<br><span>Week</span></h1>
     <div class="hero-byline">La newsletter sportive. Par Lisa Lys</div>
-    <p class="hero-desc">Une newsletter sport, chaque lundi. Paris, terrain, culture, business. 100 % gratuit, pas de spam.</p>
 
-    <div class="form-wrap">
-      <form class="form-row" onsubmit="handleSubmit(event)">
-        <input type="email" id="email-hero" placeholder="ton@email.com" required>
-        <button type="submit">S'abonner</button>
-      </form>
+    <div class="hero-bubbles">
+      <a class="hero-bubble outline" href="mailto:parissportweek@protonmail.com">Me booker</a>
+      <div class="form-wrap">
+        <form class="form-row" onsubmit="handleSubmit(event)">
+          <input type="email" id="email-hero" placeholder="ton@email.com" required>
+          <button type="submit">S'abonner</button>
+        </form>
+      </div>
+      <a class="hero-bubble outline" href="/partenaire">Proposer une collaboration</a>
     </div>
     <div class="form-note">Gratuit · Pas de spam · Se désabonner à tout moment</div>
-
-    <div class="hero-scroll">Découvrir</div>
-  </section>
-
-  <!-- CE QUE TU RECEVRAS -->
-  <section class="section-full">
-    <div class="section-full-inner">
-      <div class="chip">Chaque semaine</div>
-      <h2 class="section-title" style="text-align:center;">Ce que tu<br><em>trouveras ici</em></h2>
-      <p class="section-sub" style="text-align:center;">Une newsletter, sept sections. Pensé pour aller à l'essentiel.</p>
-
-      <div class="rubriques">
-        <div class="rubrique-card">
-          <div class="rubrique-num">01 · L'Échauffement</div>
-          <div class="rubrique-name">La tendance du moment</div>
-          <div class="rubrique-desc">Un sujet fort décrypté en profondeur. Histoire, contexte, pourquoi ça arrive maintenant à Paris.</div>
-        </div>
-        <div class="rubrique-card">
-          <div class="rubrique-num">02 · Le Vestiaire</div>
-          <div class="rubrique-name">Gear, tech, tendances</div>
-          <div class="rubrique-desc">Apps, équipements, innovations. Ce qui change le sport.</div>
-        </div>
-        <div class="rubrique-card">
-          <div class="rubrique-num">03 · Le Spot</div>
-          <div class="rubrique-name">Le focus du moment</div>
-          <div class="rubrique-desc">Le lieu à tester avant tout le monde. Tout ce qu'il faut savoir avant d'y aller.</div>
-        </div>
-        <div class="rubrique-card">
-          <div class="rubrique-num">04 · Le Partenaire</div>
-          <div class="rubrique-name">Le partenaire abonnés</div>
-          <div class="rubrique-desc">Une sélection exclusive accompagnée d'un avantage réservé à la communauté.</div>
-        </div>
-        <div class="rubrique-card">
-          <div class="rubrique-num">05 · L'Agenda</div>
-          <div class="rubrique-name">Les meilleurs events du mois</div>
-          <div class="rubrique-desc">Courses, tournois, pop-ups, événements. Tout ce qui se passe côté sport à Paris ce mois-ci.</div>
-        </div>
-        <div class="rubrique-card">
-          <div class="rubrique-num">06 · Le Film</div>
-          <div class="rubrique-name">La chronique ciné</div>
-          <div class="rubrique-desc">Un film ou documentaire autour du sport, décrypté et analysé chaque semaine.</div>
-        </div>
-        <div class="rubrique-card">
-          <div class="rubrique-num">07 · L'Œil de Lys</div>
-          <div class="rubrique-name">Note</div>
-          <div class="rubrique-desc">Son regard personnel sur la scène sport & wellness parisienne.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CARROUSEL NEWSLETTERS -->
-  <section class="section">
-    <div class="chip">Précédemment</div>
-    <h2 class="section-title">Ce qu'on écrit<br><em>chaque lundi</em></h2>
-    <div class="carousel-wrap" id="carousel">
-      <div class="carousel">
-
-        <!-- N°01 — Bienvenue -->
-        <div class="nl-card" style="display:flex;flex-direction:column;">
-          <div class="nl-card-preview"><img src="sections/n1_bienvenue.png" alt="PSW N°01 Bienvenue"></div>
-          <div class="nl-card-body-area">
-            <div>
-              <div class="nl-card-num">N° 01 · Bienvenue</div>
-              <div class="nl-card-theme">Le Reformer Pilates</div>
-              <div class="nl-card-sub">D'où ça vient, pourquoi Paris en est fou. Une histoire qui commence bien avant Instagram.</div>
-            </div>
-            <div class="nl-card-cta">Lire en s'abonnant →</div>
-          </div>
-        </div>
-
-        <!-- N°02 — L'Échauffement -->
-        <div class="nl-card" style="display:flex;flex-direction:column;">
-          <div class="nl-card-preview"><img src="sections/n2_echauffement.png" alt="PSW N°02 Échauffement"></div>
-          <div class="nl-card-body-area">
-            <div>
-              <div class="nl-card-num">N° 02 · L'Échauffement</div>
-              <div class="nl-card-theme">Le sport dehors</div>
-              <div class="nl-card-sub">Le sport collectif outdoor explose à Paris. Depuis le XIIe siècle, ce n'est pas un hasard.</div>
-            </div>
-            <div class="nl-card-cta">Lire en s'abonnant →</div>
-          </div>
-        </div>
-
-        <!-- N°03 — Le Vestiaire -->
-        <div class="nl-card" style="display:flex;flex-direction:column;">
-          <div class="nl-card-preview"><img src="sections/n3_vestiaire.png" alt="PSW N°03 Vestiaire" style="object-fit:contain;object-position:top center;background:#fff;"></div>
-          <div class="nl-card-body-area">
-            <div>
-              <div class="nl-card-num">N° 03 · Le Vestiaire</div>
-              <div class="nl-card-theme">Ces lunettes affichent tes stats</div>
-              <div class="nl-card-sub">Holoswim 2 Pro : écran OLED, fréquence cardiaque, cadence. Tes données en temps réel sous l'eau.</div>
-            </div>
-            <div class="nl-card-cta">Lire en s'abonnant →</div>
-          </div>
-        </div>
-
-        <!-- N°04 — Le Partenaire -->
-        <div class="nl-card" style="display:flex;flex-direction:column;">
-          <div class="nl-card-preview"><img src="sections/n4_partenaire.png" alt="PSW N°04 Partenaire"></div>
-          <div class="nl-card-body-area">
-            <div>
-              <div class="nl-card-num">N° 04 · Le Partenaire</div>
-              <div class="nl-card-theme">KAH Studio & Coffee</div>
-              <div class="nl-card-sub">Le studio de la rue Bichat. Yoga sculpt, booty, barre, coffee. La communauté qui revient chaque semaine.</div>
-            </div>
-            <div class="nl-card-cta">Lire en s'abonnant →</div>
-          </div>
-        </div>
-
-        <!-- N°05 — L'Agenda -->
-        <div class="nl-card" style="display:flex;flex-direction:column;">
-          <div class="nl-card-preview"><img src="sections/n5_agenda.png" alt="PSW N°05 Agenda"></div>
-          <div class="nl-card-body-area">
-            <div>
-              <div class="nl-card-num">N° 05 · L'Agenda</div>
-              <div class="nl-card-theme">La Danse</div>
-              <div class="nl-card-sub">Festival Flamenco à La Villette. Cours gratuits sous la nef du Grand Palais. Les events de la semaine.</div>
-            </div>
-            <div class="nl-card-cta">Lire en s'abonnant →</div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
   </section>
 
   <!-- QUI EST LYS -->
   <section class="section-full">
     <div class="section-full-inner">
       <div class="chip">Les créateurs</div>
-      <div class="bio" style="margin-bottom: 32px;">
+      <div class="bio">
         <div class="bio-text">
           <div class="bio-name">Lisa Lys</div>
           <div class="bio-role">Entrepreneur · Consulting · Coach sportif</div>
-          <p class="bio-desc">Je teste tout ce qui bouge dans le sport parisien. Cette newsletter, c'est mon regard partagé chaque semaine.</p>
         </div>
       </div>
-      <div class="bio">
-        <div class="bio-text">
-          <div class="bio-name">Thomas Néaume</div>
-          <div class="bio-role">Entrepreneur · DA</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="cta-block" id="cta">
-    <div class="cta-inner">
-      <h2 class="cta-title">Rejoindre la newsletter</h2>
-      <p class="cta-sub">La newsletter sportive gratuite, chaque semaine dans ta boîte.</p>
-      <form class="cta-form" onsubmit="handleSubmit(event)">
-        <input type="email" id="email-cta" placeholder="ton@email.com" required>
-        <button type="submit">S'abonner</button>
-      </form>
-      <div class="cta-note">Gratuit · Pas de spam · Se désabonner à tout moment</div>
     </div>
   </section>
 
@@ -987,6 +845,9 @@
     <div class="footer-links">
       <a href="https://www.instagram.com/paris_sport_week/" target="_blank">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:middle;margin-right:5px;"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram
+      </a>
+      <a href="https://www.tiktok.com/@paris_sport_week" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:5px;"><path d="M16.6 5.82c-1.02-.9-1.66-2.22-1.66-3.68V2h-3.4v14.2c0 1.6-1.3 2.9-2.9 2.9s-2.9-1.3-2.9-2.9 1.3-2.9 2.9-2.9c.3 0 .58.05.85.13v-3.47a6.2 6.2 0 0 0-.85-.06 6.3 6.3 0 1 0 6.3 6.3V9.1a8.6 8.6 0 0 0 5.06 1.63V7.33c-1.28 0-2.46-.42-3.4-1.14v-.37z"/></svg>TikTok
       </a>
       <a href="mailto:parissportweek@protonmail.com">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:middle;margin-right:5px;"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>Contact
