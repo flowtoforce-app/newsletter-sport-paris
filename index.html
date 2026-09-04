@@ -797,34 +797,58 @@
 
   <!-- TOP NAV -->
   <nav class="topnav">
-    <a class="topnav-logo" href="/"></a>
+    <a class="topnav-logo" href="/">
+      <svg viewBox="0 0 600 260" style="width:auto;height:22px;display:block;overflow:visible;">
+        <defs>
+          <clipPath id="clipPSWnav">
+            <text x="0" y="190" font-family="'Archivo Black', sans-serif" font-size="150" letter-spacing="-14">PSW</text>
+          </clipPath>
+          <linearGradient id="gradPSWnav" gradientUnits="userSpaceOnUse" x1="0" y1="30" x2="440" y2="220">
+            <stop offset="0%" stop-color="#1E1B19"/>
+            <stop offset="32%" stop-color="#453F3A"/>
+            <stop offset="65%" stop-color="#847E75"/>
+            <stop offset="100%" stop-color="#B3AEA5"/>
+          </linearGradient>
+          <filter id="cloudPSWnav" x="-40%" y="-40%" width="180%" height="180%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="3" seed="21" result="n"/>
+            <feGaussianBlur in="n" stdDeviation="6" result="nb"/>
+            <feDisplacementMap in="SourceGraphic" in2="nb" scale="55" xChannelSelector="R" yChannelSelector="G"/>
+          </filter>
+        </defs>
+        <g clip-path="url(#clipPSWnav)">
+          <rect x="-40" y="-40" width="680" height="340" fill="url(#gradPSWnav)" filter="url(#cloudPSWnav)"/>
+        </g>
+      </svg>
+    </a>
     <a class="topnav-btn" href="/partenaire">Proposer une collaboration</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <h1 class="hero-title">
-      <svg viewBox="0 0 600 260" preserveAspectRatio="xMinYMid meet" style="width:clamp(160px,32vw,320px);height:auto;display:block;overflow:visible;">
-        <defs>
-          <clipPath id="clipPSW">
-            <text x="0" y="190" font-family="'Archivo Black', sans-serif" font-size="150" letter-spacing="-14">PSW</text>
-          </clipPath>
-          <linearGradient id="gradPSW" gradientUnits="userSpaceOnUse" x1="0" y1="30" x2="440" y2="220">
-            <stop offset="0%" stop-color="#1E1B19"/>
-            <stop offset="32%" stop-color="#453F3A"/>
-            <stop offset="65%" stop-color="#847E75"/>
-            <stop offset="100%" stop-color="#B3AEA5"/>
-          </linearGradient>
-          <filter id="cloudPSW" x="-40%" y="-40%" width="180%" height="180%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="3" seed="21" result="n"/>
-            <feGaussianBlur in="n" stdDeviation="6" result="nb"/>
-            <feDisplacementMap in="SourceGraphic" in2="nb" scale="55" xChannelSelector="R" yChannelSelector="G"/>
-          </filter>
-        </defs>
-        <g clip-path="url(#clipPSW)">
-          <rect x="-40" y="-40" width="680" height="340" fill="url(#gradPSW)" filter="url(#cloudPSW)"/>
-        </g>
-      </svg>
+      <div style="display:inline-block;background:#ffffff;border-radius:12px;padding:14px 22px 8px;box-shadow:0 12px 32px rgba(0,0,0,0.35);">
+        <svg viewBox="0 0 600 260" preserveAspectRatio="xMinYMid meet" style="width:clamp(140px,26vw,260px);height:auto;display:block;overflow:visible;">
+          <defs>
+            <clipPath id="clipPSWhero">
+              <text x="0" y="190" font-family="'Archivo Black', sans-serif" font-size="150" letter-spacing="-14">PSW</text>
+            </clipPath>
+            <linearGradient id="gradPSWhero" gradientUnits="userSpaceOnUse" x1="0" y1="30" x2="440" y2="220">
+              <stop offset="0%" stop-color="#1E1B19"/>
+              <stop offset="32%" stop-color="#453F3A"/>
+              <stop offset="65%" stop-color="#847E75"/>
+              <stop offset="100%" stop-color="#B3AEA5"/>
+            </linearGradient>
+            <filter id="cloudPSWhero" x="-40%" y="-40%" width="180%" height="180%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="3" seed="21" result="n"/>
+              <feGaussianBlur in="n" stdDeviation="6" result="nb"/>
+              <feDisplacementMap in="SourceGraphic" in2="nb" scale="55" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+          </defs>
+          <g clip-path="url(#clipPSWhero)">
+            <rect x="-40" y="-40" width="680" height="340" fill="url(#gradPSWhero)" filter="url(#cloudPSWhero)"/>
+          </g>
+        </svg>
+      </div>
     </h1>
 
     <div class="hero-bubbles">
@@ -834,6 +858,7 @@
           <button type="submit">S'abonner à la newsletter</button>
         </form>
       </div>
+      <a class="hero-bubble outline" href="/partenaire">Proposer une collaboration</a>
     </div>
   </section>
 
