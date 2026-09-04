@@ -212,11 +212,11 @@
         <label class="field-label">Votre offre ou budget</label>
         <input type="text" name="budget">
       </div>
-      <button class="btn-submit" type="submit">Postuler</button>
+      <button class="btn-submit" type="submit">Envoyer</button>
     </form>
 
     <div class="success-msg" id="success">
-      Candidature reçue. On revient vers toi rapidement.
+      Proposition reçue. On revient vers toi rapidement.
     </div>
   </div>
 
@@ -225,7 +225,7 @@
       e.preventDefault();
       var form = document.getElementById('partner-form');
       var data = new FormData(form);
-      data.append('_subject', 'Nouvelle candidature partenaire Paris Sport Week');
+      data.append('_subject', 'Nouvelle proposition de collaboration Paris Sport Week');
       data.append('_captcha', 'false');
       fetch('https://formsubmit.co/ajax/parissportweek@protonmail.com', {
         method: 'POST',
