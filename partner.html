@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proposer une collaboration · Paris Sport Week</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Archivo+Black&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -188,8 +188,31 @@
 
   <div class="page">
     <div class="chip">Collaboration</div>
-    <h1 class="page-title">Proposer une <em>collaboration</em></h1>
-    <p class="page-sub" style="font-family:'Playfair Display',Georgia,serif; font-size:18px; font-weight:300; color:var(--navy); margin-bottom:12px;">Quelle collaboration ou proposition voulez-vous me proposer ?</p>
+    <h1 class="page-title" style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+      Collaboration avec
+      <svg viewBox="0 0 600 260" style="width:auto;height:0.85em;display:inline-block;overflow:visible;">
+        <defs>
+          <clipPath id="clipPSWpartner">
+            <text x="0" y="190" font-family="'Archivo Black', sans-serif" font-size="150" letter-spacing="-14">PSW</text>
+          </clipPath>
+          <linearGradient id="gradPSWpartner" gradientUnits="userSpaceOnUse" x1="0" y1="30" x2="440" y2="220">
+            <stop offset="0%" stop-color="#1E1B19"/>
+            <stop offset="32%" stop-color="#453F3A"/>
+            <stop offset="65%" stop-color="#847E75"/>
+            <stop offset="100%" stop-color="#B3AEA5"/>
+          </linearGradient>
+          <filter id="cloudPSWpartner" x="-40%" y="-40%" width="180%" height="180%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="3" seed="21" result="n"/>
+            <feGaussianBlur in="n" stdDeviation="6" result="nb"/>
+            <feDisplacementMap in="SourceGraphic" in2="nb" scale="55" xChannelSelector="R" yChannelSelector="G"/>
+          </filter>
+        </defs>
+        <g clip-path="url(#clipPSWpartner)">
+          <rect x="-40" y="-40" width="680" height="340" fill="url(#gradPSWpartner)" filter="url(#cloudPSWpartner)"/>
+        </g>
+      </svg>
+    </h1>
+    <p class="page-sub" style="font-family:'Playfair Display',Georgia,serif; font-size:18px; font-weight:300; color:var(--navy); margin-bottom:12px;">Proposition :</p>
 
     <form class="form-wrap" id="partner-form">
       <div class="field">
@@ -201,7 +224,7 @@
         <input type="email" name="email" required>
       </div>
       <div class="field">
-        <label class="field-label">Quelle offre souhaitez-vous mettre en avant ?</label>
+        <label class="field-label">De quelle offre souhaitez-vous me parler ?</label>
         <textarea name="offre" required></textarea>
       </div>
       <button class="btn-submit" type="submit">Envoyer</button>
