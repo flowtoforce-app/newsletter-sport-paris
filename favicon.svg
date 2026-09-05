@@ -1,4 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="96" fill="#ffffff"/>
-  <text x="256" y="322" text-anchor="middle" font-family="Arial Black, Helvetica Neue, sans-serif" font-weight="900" font-size="220" letter-spacing="-10" fill="#2D2926">PSW</text>
+  <rect width="512" height="512" fill="#F5F3F1"/>
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="130" y1="200" x2="430" y2="340">
+      <stop offset="0%" stop-color="#1E1B19"/>
+      <stop offset="32%" stop-color="#453F3A"/>
+      <stop offset="65%" stop-color="#847E75"/>
+      <stop offset="100%" stop-color="#B3AEA5"/>
+    </linearGradient>
+  </defs>
+  <text x="256" y="322" text-anchor="middle" font-family="Arial Black, Helvetica Neue, sans-serif" font-weight="900" font-size="220" letter-spacing="-10" fill="url(#g)">PSW</text>
 </svg>
