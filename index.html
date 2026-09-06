@@ -73,13 +73,14 @@
 
     .hero-title {
       position: relative;
-      font-family: 'Archivo Black', sans-serif;
-      font-size: clamp(40px, 9vw, 76px);
-      font-weight: 400;
-      color: var(--white);
-      letter-spacing: -2px;
       line-height: 1;
       margin-bottom: 20px;
+    }
+    .hero-title svg {
+      height: clamp(40px, 9vw, 76px);
+      width: auto;
+      display: block;
+      overflow: visible;
     }
 
     .hero-byline {
@@ -803,14 +804,32 @@
   <nav class="topnav">
     <a class="topnav-logo" href="/">
       <svg viewBox="0 0 600 260" style="width:auto;height:22px;display:block;overflow:visible;">
-        <text x="0" y="190" font-family="'Archivo Black', sans-serif" font-size="150" letter-spacing="-14" fill="#ffffff">PSW</text>
+        <defs>
+          <filter id="navSoftW" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3.6" result="b"/>
+            <feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"/>
+          </filter>
+        </defs>
+        <text x="0" y="190" font-family="'Archivo Black', sans-serif" font-size="150" letter-spacing="-14" fill="#ffffff">PS</text>
+        <text x="188.58" y="190" font-family="'Archivo Black', sans-serif" font-size="150" fill="#ffffff" filter="url(#navSoftW)" transform="translate(188.58,0) scale(0.82,1) translate(-188.58,0)">W</text>
       </svg>
     </a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <h1 class="hero-title">PSW</h1>
+    <h1 class="hero-title">
+      <svg viewBox="0 0 600 260" role="img" aria-label="PSW">
+        <defs>
+          <filter id="heroSoftW" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3.6" result="b"/>
+            <feColorMatrix in="b" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"/>
+          </filter>
+        </defs>
+        <text x="0" y="190" font-family="'Archivo Black', sans-serif" font-size="150" letter-spacing="-14" fill="#ffffff">PS</text>
+        <text x="188.58" y="190" font-family="'Archivo Black', sans-serif" font-size="150" fill="#ffffff" filter="url(#heroSoftW)" transform="translate(188.58,0) scale(0.82,1) translate(-188.58,0)">W</text>
+      </svg>
+    </h1>
 
     <div class="hero-bubbles">
       <a class="hero-bubble outline" href="mailto:parissportweek@protonmail.com">Me booker</a>
