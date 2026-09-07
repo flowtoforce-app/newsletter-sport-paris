@@ -43,7 +43,7 @@
     .hero {
       min-height: 100vh;
       min-height: 100dvh;
-      background: #111 url('hero-photo.jpg') center / cover no-repeat;
+      background: #111;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -51,6 +51,16 @@
       padding: 48px 32px;
       text-align: left;
       position: relative;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
 
     .hero::before {
@@ -818,6 +828,9 @@
 
   <!-- HERO -->
   <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline poster="hero-video-poster.jpg">
+      <source src="hero-video.mp4" type="video/mp4">
+    </video>
     <div class="hero-bubbles">
       <a class="hero-bubble outline" href="mailto:parissportweek@protonmail.com">Me booker</a>
       <div class="form-wrap">
