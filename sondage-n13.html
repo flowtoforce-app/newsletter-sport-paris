@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Sondage · Paris Sport Week</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #F5F3F1;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 560px;
+      padding: 52px 44px 44px;
+      border-radius: 22px;
+      border: 3px dotted #D9D6D1;
+      box-shadow: 0 30px 70px rgba(45, 41, 38, 0.18);
+    }
+
+    .label {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #6E6A65;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 300;
+      color: #2D2926;
+      margin-bottom: 8px;
+    }
+
+    .brand em {
+      font-style: normal;
+      color: #6E6A65;
+    }
+
+    .tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #86807A;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, #2D2926, #D9D6D1 60%, transparent);
+      margin-bottom: 32px;
+    }
+
+    .intro {
+      font-size: 15px;
+      color: #2D2926;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .question {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 25px;
+      color: #2D2926;
+      line-height: 1.35;
+      margin-bottom: 28px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 17px 22px;
+      background: #F5F3F1;
+      border: 1px solid #D9D6D1;
+      border-radius: 999px;
+      color: #2D2926;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .option:hover {
+      background: #2D2926;
+      color: #ffffff;
+      border-color: #2D2926;
+      transform: translateX(4px);
+    }
+
+    .option-letter {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #2D2926;
+      color: #ffffff;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .option:hover .option-letter {
+      background: #D9D6D1;
+      color: #2D2926;
+    }
+
+    .footer {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #86807A;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="label">N° 13 · Octobre 2026</div>
+    <div class="brand">Paris Sport <em>Week</em></div>
+    <div class="tagline">PSW Coaching, la suite</div>
+    <div class="divider"></div>
+
+    <p class="intro">Un seul clic. Ton avis nous aide à construire la suite.</p>
+
+    <div class="question">La séance d'1h pour apprivoiser les machines, tu la voudrais&nbsp;:</div>
+
+    <div class="options">
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°13&body=Ma réponse : Avant de recevoir mon app PSW Coaching">
+        <span class="option-letter">A</span>Avant de recevoir mon app PSW Coaching
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°13&body=Ma réponse : Le jour de la livraison de l'app">
+        <span class="option-letter">B</span>Le jour de la livraison de l'app
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°13&body=Ma réponse : Après avoir déjà commencé mon app">
+        <span class="option-letter">C</span>Après avoir déjà commencé mon app
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°13&body=Ma réponse : Peu importe, comme ça t'arrange">
+        <span class="option-letter">D</span>Peu importe, comme ça t'arrange
+      </a>
+    </div>
+
+    <div class="footer">Paris Sport Week · parissportweek.fr</div>
+  </div>
+</body>
+</html>
