@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Sondage · Paris Sport Week</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #F5F3F1;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 560px;
+      padding: 52px 44px 44px;
+      border-radius: 22px;
+      border: 3px dotted #D9D6D1;
+      box-shadow: 0 30px 70px rgba(45, 41, 38, 0.18);
+    }
+
+    .label {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #6E6A65;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 300;
+      color: #2D2926;
+      margin-bottom: 8px;
+    }
+
+    .brand em {
+      font-style: normal;
+      color: #6E6A65;
+    }
+
+    .tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #86807A;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, #2D2926, #D9D6D1 60%, transparent);
+      margin-bottom: 32px;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #2D2926;
+      line-height: 1.3;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      font-size: 15px;
+      color: #2D2926;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background: #F5F3F1;
+      border-radius: 14px;
+      padding: 18px 20px;
+      font-size: 14px;
+      color: #2D2926;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .question {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 22px;
+      color: #2D2926;
+      line-height: 1.35;
+      margin-bottom: 28px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 17px 22px;
+      background: #F5F3F1;
+      border: 1px solid #D9D6D1;
+      border-radius: 999px;
+      color: #2D2926;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .option:hover {
+      background: #2D2926;
+      color: #ffffff;
+      border-color: #2D2926;
+      transform: translateX(4px);
+    }
+
+    .option-letter {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #2D2926;
+      color: #ffffff;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .option:hover .option-letter {
+      background: #D9D6D1;
+      color: #2D2926;
+    }
+
+    .footnote {
+      font-size: 12px;
+      color: #86807A;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .footer {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #86807A;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="label">N° 14 · Octobre 2026</div>
+    <div class="brand">Paris Sport <em>Week</em></div>
+    <div class="tagline">PSW · Le panier</div>
+    <div class="divider"></div>
+
+    <div class="headline">Et toi, tes repas de la semaine, ça se passe comment&nbsp;?</div>
+
+    <p class="intro">Décider, faire les courses, cuisiner, ne rien jeter. Chacune a son moment qui coince dans la semaine. Ta réponse nous aide à préparer les prochains numéros.</p>
+
+    <div class="highlight">Dans PSW Coaching, ton menu est prévu jour après jour et ta liste de courses se crée toute seule à partir du menu.</div>
+
+    <div class="question">Qu'est-ce qui te prend le plus de temps dans ta semaine côté repas&nbsp;?</div>
+
+    <div class="options">
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°14&body=Ma réponse : Décider quoi manger">
+        <span class="option-letter">A</span>Décider quoi manger
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°14&body=Ma réponse : Faire les courses">
+        <span class="option-letter">B</span>Faire les courses
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°14&body=Ma réponse : Cuisiner">
+        <span class="option-letter">C</span>Cuisiner
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°14&body=Ma réponse : Ne rien jeter">
+        <span class="option-letter">D</span>Ne rien jeter
+      </a>
+      <a class="option" href="mailto:parissportweek@protonmail.com?subject=Sondage PSW N°14&body=Ma réponse : Rien de tout ça, j'ai trouvé mon organisation">
+        <span class="option-letter">E</span>Rien de tout ça, j'ai trouvé mon organisation
+      </a>
+    </div>
+
+    <p class="footnote">Une seule réponse, ça prend dix secondes.</p>
+
+    <div class="footer">Paris Sport Week · parissportweek.fr</div>
+  </div>
+</body>
+</html>
